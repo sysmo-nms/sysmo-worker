@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+mainClassName = 'io.sysmo.worker.SysmoWorker'
+
+repositories {
+    mavenCentral()
+
+    // snmp4j
+    maven {
+        url 'https://oosnmp.net/dist/release'
+    }
+
+}
+
+dependencies {
+    testCompile 'junit:junit:4.2'
+}
+
+jdepend  { ignoreFailures = true }
+pmd      { ignoreFailures = true }
+
+findbugs { ignoreFailures = true }
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+javadoc {
+    options.overview = "overview.html"
+    options.docTitle = "NChecks API"
+    options.windowTitle = "NChecks API"
+}
+
+dependencies {
+    compile 'org.erlang.otp:jinterface:1.5.6'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.slf4j:slf4j-jdk14:1.7.12'
+}

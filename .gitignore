@@ -1,3 +1,4 @@
 # gradle builds
 .gradle/
 build/
+/sysmo-worker.tar.gz

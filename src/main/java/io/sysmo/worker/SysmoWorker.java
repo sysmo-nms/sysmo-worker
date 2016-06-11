@@ -32,7 +32,7 @@ import com.ericsson.otp.erlang.OtpNode;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-import io.sysmo.nchecks.NChecksErlang;
+import io.sysmo.nchecks.impl.ErlangNodeNChecks;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -136,7 +136,7 @@ public class SysmoWorker {
              */
             // TODO
             InetAddress stateServerAddress = InetAddress.getByName(stateServer);
-            NChecksErlang nchecks = NChecksErlang.getInstance(
+            ErlangNodeNChecks nchecks = ErlangNodeNChecks.getInstance(
                     nchecksMbox,masterNode,rubyDir,
                     utilsDir,etcDir,stateServerAddress,stateServerPort);
 

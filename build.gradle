@@ -26,10 +26,6 @@ repositories {
 
 }
 
-dependencies {
-    testCompile 'junit:junit:4.2'
-}
-
 jdepend  { ignoreFailures = true }
 pmd      { ignoreFailures = true }
 
@@ -42,9 +38,9 @@ tasks.withType(FindBugs) {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.2'
-    compile 'io.sysmo:nchecks:0.10.3-SNAPSHOT'
-    compile 'org.erlang.otp:jinterface:1.5.6'
-    compile 'org.slf4j:slf4j-api:1.7.12'
-    compile 'org.slf4j:slf4j-jdk14:1.7.12'
+    testCompile group: 'junit', name: 'junit', version: '4.2'
+    compile group: 'io.sysmo', name: 'nchecks:', version: '0.10.3-SNAPSHOT', changing: true
+    compile group: 'org.erlang.otp', name: 'jinterface', version: '1.5.6'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.12'
+    compile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.7.12'
 }

@@ -4,3 +4,6 @@
 [submodule "sub/nchecks-base"]
 	path = sub/nchecks-base
 	url = https://github.com/sysmo-nms/nchecks-base.git
+[submodule "nchecks"]
+	path = nchecks
+	url = https://github.com/sysmo-nms/nchecks.git

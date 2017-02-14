@@ -1,9 +1,6 @@
-[submodule "sub/pping"]
-	path = sub/pping
+[submodule "deps/pping"]
+	path = deps/pping
 	url = https://github.com/sysmo-nms/pping.git
-[submodule "sub/nchecks-base"]
-	path = sub/nchecks-base
-	url = https://github.com/sysmo-nms/nchecks-base.git
-[submodule "nchecks"]
-	path = nchecks
+[submodule "deps/nchecks"]
+	path = deps/nchecks
 	url = https://github.com/sysmo-nms/nchecks.git

@@ -1,1 +1,1 @@
-include 'nchecks'
+include 'deps/nchecks'

@@ -22,6 +22,7 @@ clean:
 	@ cd deps/pping; go clean pping.go
 	@ $(GRADLE) clean
 	@ rm -f sysmo-worker.tar.gz
+	@ rm -rf _build
 
 doc:
 	@ $(GRADLE) javadoc
